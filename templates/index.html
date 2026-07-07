@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<title>Coffee Export Prediction</title>
+
+</head>
+
+<body>
+
+<h1>Kenya Coffee Export Prediction</h1>
+
+<form action="/predict" method="POST">
+
+<input type="number" step="any" name="year" placeholder="Year">
+
+<input type="number" step="any" name="average_kenyan_coffee_price_usd" placeholder="Kenyan Coffee Price">
+
+<input type="number" step="any" name="average_foreign_coffee_price_usd" placeholder="Foreign Coffee Price">
+
+<input type="number" step="any" name="current_total_factor_productivity" placeholder="current_total_factor_productivity">
+<!-- Continue for all variables -->
+
+<button type="submit">
+
+Predict
+
+</button>
+
+</form>
+
+{% if prediction %}
+
+<h2>
+
+Predicted Exports
+
+{{ prediction }}
+
+</h2>
+
+{% endif %}
+
+</body>
+
+</html>
